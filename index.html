@@ -9,7 +9,7 @@
 
       Spice Bowl Payment Form
       Author: Caleb Snow
-      Date:   1//19
+      Date:   1/15/19
 
       Filename:   sb_payment.html
 
@@ -30,7 +30,7 @@
 
         <form id="login" action="http://www.example.com/sb/login" method="post">
             <input id="userBox" type="text" placeholder="username" />
-            <input id="pwdBox" type="text" placeholder="password">
+            <input id="pwdBox" type="text" placeholder="password" />
         </form>
 
         <nav> <a id="navicon" href="#"><img src="sb_navicon.png" alt="" /></a>
@@ -61,6 +61,58 @@
 
                 <label for="street2">Street Address (2)</label>
                 <input id="streetBox2" type="text" />
+                <datalist id="statelist">
+                    <option value="AL">
+                    <option value="AK">
+                    <option value="AZ">
+                    <option value="AR">
+                    <option value="CA">
+                    <option value="CO">
+                    <option value="CT">
+                    <option value="DE">
+                    <option value="FL">
+                    <option value="GA">
+                    <option value="HI">
+                    <option value="ID">
+                    <option value="IL">
+                    <option value="IN">
+                    <option value="IA">
+                    <option value="KS">
+                    <option value="KY">
+                    <option value="LA">
+                    <option value="ME">
+                    <option value="MD">
+                    <option value="MA">
+                    <option value="MI">
+                    <option value="MN">
+                    <option value="MS">
+                    <option value="MO">
+                    <option value="MT">
+                    <option value="NE">
+                    <option value="NV">
+                    <option value="NH">
+                    <option value="NJ">
+                    <option value="NM">
+                    <option value="NY">
+                    <option value="NC">
+                    <option value="ND">
+                    <option value="OH">
+                    <option value="OK">
+                    <option value="OR">
+                    <option value="PA">
+                    <option value="RI">
+                    <option value="SC">
+                    <option value="SD">
+                    <option value="TN">
+                    <option value="TX">
+                    <option value="UT">
+                    <option value="VT">
+                    <option value="VA">
+                    <option value="WA">
+                    <option value="WV">
+                    <option value="WI">
+                    <option value="WY">
+                </datalist>
 
                 <label for="city">City</label>
                 <input id="cityBox" type="text" required />
@@ -101,8 +153,36 @@
                         <input id="cCard" type="radio" value="visa" required />
                         <img src="sb_visa.png" alt="Visa">
                     </label>
-
                 </fieldset>
+                <label for="cardBox">Credit Card Number</label>
+                <input type="text" name="creditCard" id="cardBox" required pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" />
+
+                <label for="monthList">Expiration Date</label>
+                <select name="cardMonth" id="monthList">
+                    <option value="--Month--"></option>
+                    <option value="January">January (01)</option>
+                    <option value="February">February (02)</option>
+                    <option value="March">March (03)</option>
+                    <option value="April">April (04)</option>
+                    <option value="May">May (05)</option>
+                    <option value="June">June (06)</option>
+                    <option value="July">July (07)</option>
+                    <option value="August">August (08)</option>
+                    <option value="September">September (09)</option>
+                    <option value="October">October (10)</option>
+                    <option value="November">November (11)</option>
+                    <option value="December">Decmeber (12)</option>
+                </select>
+
+
+                <select name="cardYear" id="yearlist">
+                    <option value="Year"></option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                </select>
 
             </fieldset>
             <fieldset>
